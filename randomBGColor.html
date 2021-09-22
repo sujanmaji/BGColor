@@ -46,6 +46,7 @@
             mainDiv.style.width = "100%";
             let randColor = RGBColor();
             mainDiv.style.background = randColor;
+            navigator.vibrate([10, 50, 20, 30])
             console.log(randColor);
             navigator.vibrate(50);
             let del = document.getElementById("msgDiv");
