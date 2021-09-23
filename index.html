@@ -9,48 +9,10 @@
 </head>
 
 <body>
-    <script>
-        function randBetween(min, max) {
-            return Math.floor((max - min) * Math.random() + min);
-        }
-        function RGBColor() {
-            let r = randBetween(0, 255);
-            let g = randBetween(0, 255);
-            let b = randBetween(0, 255);
-            let color = "rgb(" + r + "," + g + "," + b + ")";
-            return color;
-        }
-        let div = document.createElement("div");
-        div.setAttribute("id", "msgDiv")
-        let msg = document.createElement("h1");
-        let text = document.createTextNode("Click anywhere to change Color randomly!");
-        msg.appendChild(text);
-        div.appendChild(msg);
-        document.body.appendChild(div);
-
-        let bodyStyle = document.body.style;
-        bodyStyle.textAlign = "center"
-
-        function myFun() {
-            let mainDiv = document.body;
-            mainDiv.style.height = "100%";
-            mainDiv.style.width = "100%";
-            let randColor = RGBColor();
-            mainDiv.style.background = randColor;
-            console.log(randColor);
-        }
-        window.onload = myFun();
-        document.addEventListener("click", function () {
-            myFun();
-            navigator.vibrate([10, 50, 20, 30])
-            let del = document.getElementById("msgDiv");
-            if (del) {
-                del.remove();
-            }
-
-        });
-
-    </script>
+    <div id="msgDiv">
+        <h1>Click anywhere to change Color randomly!</h1>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
