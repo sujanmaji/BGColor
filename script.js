@@ -4,9 +4,9 @@ class ColorGenerator {
     ColorGenerator() {
     }
     RGBColor() {
-        this.r = randBetween(0, 255);
-        this.g = randBetween(0, 255);
-        this.b = randBetween(0, 255);
+        this.r = randBetween(0, 16) * 16;
+        this.g = randBetween(0, 16) * 16;
+        this.b = randBetween(0, 16) * 16;
         return "rgb(" + this.r + "," + this.g + "," + this.b + ")";
     }
     rgbCode() {
